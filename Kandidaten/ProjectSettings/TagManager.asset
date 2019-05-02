@@ -12,6 +12,7 @@ TagManager:
   - TurretSpawner
   - Turret2
   - TurretSpawner2
+  - collider
   layers:
   - Default
   - TransparentFX

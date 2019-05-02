@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657838, g: 0.49641234, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1264,7 +1264,7 @@ GameObject:
   - component: {fileID: 524158946}
   m_Layer: 0
   m_Name: colliderTurret
-  m_TagString: TurretSpawner
+  m_TagString: collider
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1280,7 +1280,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10, y: 1, z: 8}
+  m_Size: {x: 11, y: 1, z: 8}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!4 &524158947
 Transform:
@@ -1290,7 +1290,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 524158945}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 17.41, y: 0, z: -6.75}
+  m_LocalPosition: {x: 18, y: 0, z: -7}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1562,7 +1562,7 @@ GameObject:
   - component: {fileID: 637286512}
   m_Layer: 0
   m_Name: colliderTurret (1)
-  m_TagString: TurretSpawner2
+  m_TagString: collider
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1578,7 +1578,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10, y: 1, z: 8}
+  m_Size: {x: 13, y: 1, z: 8}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!4 &637286513
 Transform:
@@ -1588,7 +1588,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 637286511}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 28.89, y: 0, z: -7.12}
+  m_LocalPosition: {x: 30, y: 0, z: -7}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2161,6 +2161,7 @@ GameObject:
   - component: {fileID: 829163475}
   - component: {fileID: 829163474}
   - component: {fileID: 829163478}
+  - component: {fileID: 829163479}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -2256,6 +2257,26 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   m_MaxRayIntersections: 0
+--- !u!114 &829163479
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 829163473}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ad2bea50d0de784d849f104034ef0de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  standardTurret:
+    cost: 0
+    prefab: {fileID: 0}
+  missileLauncher:
+    cost: 0
+    prefab: {fileID: 0}
+  prefab1: {fileID: 1101549949482084, guid: 34745feb8379d47fea1a5e329dafa370, type: 3}
+  prefab2: {fileID: 1710604930049100, guid: 3f89516074b924952bf04323f15d91ea, type: 3}
 --- !u!4 &855322397 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4686726603047634, guid: d893b76196ae44a04bca729398eb690f,
@@ -2508,7 +2529,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ad2bea50d0de784d849f104034ef0de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefab: {fileID: 1101549949482084, guid: 34745feb8379d47fea1a5e329dafa370, type: 3}
+  standardTurret:
+    cost: 0
+    prefab: {fileID: 0}
+  missileLauncher:
+    cost: 0
+    prefab: {fileID: 0}
+  prefab1: {fileID: 0}
+  prefab2: {fileID: 0}
 --- !u!4 &1060015766 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4686726603047634, guid: d893b76196ae44a04bca729398eb690f,
@@ -4704,6 +4732,50 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1850196111}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1778355462
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1778355464}
+  - component: {fileID: 1778355463}
+  m_Layer: 0
+  m_Name: collider
+  m_TagString: collider
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &1778355463
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1778355462}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 15, y: 1, z: 8}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!4 &1778355464
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1778355462}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 5, y: 0, z: -7}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1788548670
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5154,12 +5226,19 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1927668381}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4ad2bea50d0de784d849f104034ef0de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefab: {fileID: 0}
+  standardTurret:
+    cost: 0
+    prefab: {fileID: 0}
+  missileLauncher:
+    cost: 0
+    prefab: {fileID: 0}
+  prefab1: {fileID: 0}
+  prefab2: {fileID: 0}
 --- !u!1001 &1937967467
 PrefabInstance:
   m_ObjectHideFlags: 0

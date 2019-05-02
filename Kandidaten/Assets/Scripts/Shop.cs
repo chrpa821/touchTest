@@ -14,7 +14,7 @@ public class Shop : MonoBehaviour {
 			return;
 		}
 		playerStats.money -= standardTurret.cost;
-		GameObject turret = (GameObject) Instantiate(standardTurret.prefab, new Vector3(5f,0.5f,5f), Quaternion.identity);
+		GameObject turret = (GameObject)Instantiate(standardTurret.prefab, Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 48f)), Quaternion.identity);
 	}
 
 	public void selectMissileTurret(){
@@ -24,7 +24,7 @@ public class Shop : MonoBehaviour {
 			return;
 		}
 		playerStats.money -= missileLauncher.cost;
-		GameObject turret = (GameObject) Instantiate(missileLauncher.prefab, new Vector3(5f,0.5f,5f), Quaternion.identity);
+		GameObject turret = (GameObject)Instantiate(missileLauncher.prefab, Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 48f)), Quaternion.identity);
 	}
 
 
