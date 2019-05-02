@@ -8,6 +8,10 @@ TagManager:
   - projectile1
   - ground
   - Enemy
+  - Turret1
+  - TurretSpawner
+  - Turret2
+  - TurretSpawner2
   layers:
   - Default
   - TransparentFX
